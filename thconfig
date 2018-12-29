@@ -1,0 +1,31 @@
+encoding  utf-8
+language ru
+
+source Chetverka.th
+
+export model -o output/chetverka.lox
+export model -format survex -o output/chetverka.3d
+
+layout normal
+     symbol-set AUT
+     doc-author "Paweł Krawczyk"
+     doc-title "Четвёрка"
+     statistics explo all  
+     statistics topo all
+     statistics carto all
+     statistics copyright all
+     legend on
+     map-comment "Четвёрка"
+     # for debugging
+     #symbol-show point cave-station
+     #symbol-show group cave-centerline
+     #debug station-names
+     #map-header 0 0 off 
+     symbol-hide group cave-centerline
+     symbol-hide point cave-station
+endlayout
+
+export map -format pdf -layout normal -o output/chetverka.pdf
+export map -format pdf -layout normal -projection extended -o output/chetverka_ext.pdf
+export map -o output/chetverka.kml
+export map -o output/chetverka.xvi
