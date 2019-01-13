@@ -16,6 +16,7 @@ layout normal
      statistics copyright all
      legend on
      map-comment "Четвёрка"
+     color map-fg 80
      # for debugging
      #symbol-show point cave-station
      #symbol-show group cave-centerline
